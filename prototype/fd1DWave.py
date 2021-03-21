@@ -49,6 +49,8 @@ def main():
     
       #order 2 FD space derivative 
       spaceDerive2[1:n-1] = (p1[0:n-2] - 2*p1[1:n-1] + p1[2:n])/dx/dx
+
+      spaceDerive2[int(3/4)*n:] = .84*spaceDerive2[int(3/4)*n:]
     
       #order 2 FD time derivative
       p2 = c*c*dt*dt*spaceDerive2 + 2*p1 - p0

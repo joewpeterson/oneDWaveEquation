@@ -1,2 +1,6 @@
 *.dat
 *.mp4
+*.swp
+.DS_Store
+*.o
+git_instruction
