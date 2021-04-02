@@ -1,14 +1,10 @@
-oneDWave: main.o initFreeModel.o initFreeWavelet.o
-	gcc -o oneDwave main.o initFreeModel.o initFreeWavelet.o
+CC=gcc
+OBJ=main.o initFreeModel.o initFreeWavelet.o fdWaveTimeStep.o 
 
-main.o: main.c main.h 
-	gcc -c  main.c
+oneDWave: $(OBJ) main.h
+	$(CC) -o oneDwave $(OBJ)
 
-initFreeModel.o: initFreeModel.c main.h
-	gcc -c initFreeModel.c
-
-initFreeWavelet.o: initFreeWavelet.c main.h
-	gcc -c initFreeWavelet.c
+$(OBJ): main.h
 
 .PHONY clean:
-	rm main.o initFreeModel.o oneDWave initFreeWavelet.o
+	rm $(OBJ) oneDWave
