@@ -1,7 +1,16 @@
-#include "main.h"
+#include "oneDWaveEquation.h"
 
 void initWavelet(struct modelParam *mod, struct inputWavelet *inWave){
-  inWave->dt = mod->dx / mod->vel;
+  //Find max velocity
+  float maxVel = 0;
+  for (int i = 0; i< mod->nx; i++){
+    if (mod->vel[i] > maxVel)
+      maxVel = mod->vel[i];
+  }
+     
+  maxVel *= 1.1;
+
+  inWave->dt = mod->dx / maxVel;
   inWave->Lt = 0.5;
   inWave->nt = inWave->Lt/inWave->dt;
 

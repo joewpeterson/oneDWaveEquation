@@ -14,12 +14,12 @@ struct modelParam {
   int   nx;
   float dx;
   float lx;
-  float vel;
 
   //presure time steps
   float *p0;
   float *p1;
   float *p2;;
+  float *vel;
 };
 
 /* 

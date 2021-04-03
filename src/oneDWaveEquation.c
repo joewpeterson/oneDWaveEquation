@@ -1,4 +1,4 @@
-#include "main.h"
+#include "oneDWaveEquation.h"
 
 
 int main(){
@@ -22,7 +22,7 @@ int main(){
   //Do the wave propagation
   for (int i=0; i<inwave.nt; i++){
     //Inject the source
-    mod.p1[mod.nx/4] += inwave.dt * inwave.dt * mod.vel * 2 / mod.dx  * inwave.wavelet[i];
+    mod.p1[mod.nx/4] += inwave.dt * inwave.dt * mod.vel[mod.nx/4] * 2 / mod.dx  * inwave.wavelet[i];
 
     fdWaveTimeStep(&mod, &inwave);
     

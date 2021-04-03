@@ -1,10 +1,10 @@
 CC=gcc
-OBJ=main.o initFreeModel.o initFreeWavelet.o fdWaveTimeStep.o 
+OBJ=oneDWaveEquation.o initFreeModel.o initFreeWavelet.o fdWaveTimeStep.o 
 
-oneDWave: $(OBJ) main.h
+oneDWave: $(OBJ) oneDWaveEquation.h
 	$(CC) -o oneDwave $(OBJ)
 
-$(OBJ): main.h
+$(OBJ): oneDWaveEquation.h
 
 .PHONY clean:
 	rm $(OBJ) oneDWave

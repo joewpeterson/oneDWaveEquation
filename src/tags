@@ -1,0 +1,6 @@
+MoneDWaveEquation	oneDWaveEquation.c	/^int main(){$/
+fdWaveTimeStep	fdWaveTimeStep.c	/^void fdWaveTimeStep(struct modelParam *mod, struct/
+freeModel	initFreeModel.c	/^void freeModel(struct modelParam *mod){$/
+freeWavelet	initFreeWavelet.c	/^void freeWavelet(struct inputWavelet *inWave){$/
+initModel	initFreeModel.c	/^void initModel(struct modelParam *mod){$/
+initWavelet	initFreeWavelet.c	/^void initWavelet(struct modelParam *mod, struct in/
