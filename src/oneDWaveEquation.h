@@ -11,15 +11,15 @@
  * the second order time FD arrays
 */
 struct modelParam {
-  int   nx;
-  float dx;
-  float lx;
-
-  //presure time steps
-  float *p0;
-  float *p1;
-  float *p2;;
-  float *vel;
+	int   nx;
+	float dx;
+	float lx;
+	
+	//presure time steps
+	float *p0;
+	float *p1;
+	float *p2;;
+	float *vel;
 };
 
 /* 
@@ -27,12 +27,12 @@ struct modelParam {
  * the wavelet to be injected
 */
 struct inputWavelet {
-  int nt;
-  float dt;
-  float Lt;
-
-  //wavelet pointers
-  float *wavelet;
+	int nt;
+	float dt;
+	float Lt;
+	
+	//wavelet pointers
+	float *wavelet;
 };
 
 

@@ -1,6 +1,13 @@
-MoneDWaveEquation	oneDWaveEquation.c	/^int main(){$/
-fdWaveTimeStep	fdWaveTimeStep.c	/^void fdWaveTimeStep(struct modelParam *mod, struct/
-freeModel	initFreeModel.c	/^void freeModel(struct modelParam *mod){$/
-freeWavelet	initFreeWavelet.c	/^void freeWavelet(struct inputWavelet *inWave){$/
-initModel	initFreeModel.c	/^void initModel(struct modelParam *mod){$/
-initWavelet	initFreeWavelet.c	/^void initWavelet(struct modelParam *mod, struct in/
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+fdWaveTimeStep	fdWaveTimeStep.c	/^void fdWaveTimeStep(struct modelParam *mod, struct inputWavelet *inwave)$/;"	f
+freeModel	initFreeModel.c	/^void freeModel(struct modelParam *mod)$/;"	f
+freeWavelet	initFreeWavelet.c	/^void freeWavelet(struct inputWavelet *inWave)$/;"	f
+initModel	initFreeModel.c	/^void initModel(struct modelParam *mod)$/;"	f
+initWavelet	initFreeWavelet.c	/^void initWavelet(struct modelParam *mod, struct inputWavelet *inWave)$/;"	f
+main	oneDWaveEquation.c	/^int main()$/;"	f
+p_to_file	oneDWaveEquation.c	/^void p_to_file (FILE *fptr, float *p_array,int len)$/;"	f
