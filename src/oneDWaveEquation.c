@@ -28,6 +28,9 @@ int main()
 	fprintf(fptr, "%f\n", mod.dx);
 	fprintf(fptr, "%f\n", mod.lx);
 	
+	struct timeval start, end;
+	gettimeofday(&start, NULL);
+
 	int N = 8;
 	//Do the wave propagation sequentially.
 	for (int i=0; i<inwave.nt; i++){
@@ -42,7 +45,12 @@ int main()
 			p_to_file(fptr, mod.p2, mod.nx);
 		}
 	} 
+	gettimeofday(&end, NULL);
 	
+	int elapse;
+        elapse = (end.tv_sec - start.tv_sec)*1e6 + end.tv_usec - start.tv_usec;
+        printf("run time: %d\n", elapse);
+
 	//close the file we are writing your data to
 	fclose(fptr);
 	

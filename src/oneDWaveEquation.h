@@ -2,6 +2,9 @@
 #include<stdlib.h>
 #include<math.h>
 #include<string.h>
+#include<omp.h>
+#include<time.h>
+#include<sys/time.h>
 
 #ifndef MAIN_H
 #define MAIN_H

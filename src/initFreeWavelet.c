@@ -24,6 +24,8 @@ void initWavelet(struct modelParam *mod, struct inputWavelet *inWave)
 	float fc, t0;
 	fc = 20;
 	t0 = 1.5/fc;
+	
+	#pragma omp parallel for
 	for (int i=0; i<inWave->nt; i++){
 		tau = fc* M_PI * (i*inWave->dt - t0); 
 		inWave->wavelet[i] = (1 - 2*(pow(tau, 2))) *exp(-pow(tau,2));
